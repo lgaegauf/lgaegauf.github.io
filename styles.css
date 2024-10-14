@@ -344,7 +344,7 @@ p {
 }
 
 .about-research-container {
-    max-width: 1200px; /* Constrain the content width */
+    max-width: 1350px; /* Constrain the content width */
     margin: 0 auto; /* Center the content horizontally */
     padding: 0 20px; /* Add some horizontal padding for smaller screens */
 }
