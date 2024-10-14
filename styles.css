@@ -339,38 +339,39 @@ p {
 .about-research {
     background-color: #3f6ab0;
     color: white;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    position: relative;
-    z-index: 1;
-    text-align: left;
+    padding: 70px 0; /* Add space at the top and bottom */
+    width: 100%; /* Ensure the banner spans the full width of the page */
+}
+
+.about-research-container {
+    max-width: 1200px; /* Constrain the content width */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Add some horizontal padding for smaller screens */
 }
 
 .about-research h2 {
     font-size: 2rem;
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: left; /* Ensure the heading is left-aligned */
 }
 
 .about-research p {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: white;
     margin-top: 20px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left; /* Ensure paragraphs are left-aligned */
 }
 
-
 .research-list {
-    list-style: none;
-    padding-left: 0;
+    margin-top: 20px;
+    font-size: 1.1rem;
     text-align: left;
-    margin-bottom: 40px;
+    padding-left: 50px;
 }
 
 .research-list li {
-    margin-bottom: 5px;
+    font-size: 1.1rem;
 }
-
 
 .research-section {
     padding: 60px 0;
