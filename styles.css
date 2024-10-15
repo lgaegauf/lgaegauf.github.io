@@ -180,6 +180,7 @@ p {
 .card ul li {
     margin-bottom: 5px; /* Adds spacing between each list item */
     font-size: 1.1rem;   /* Slightly larger text */
+    color: #555
 }
 
 .card ul li span {
