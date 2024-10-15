@@ -12,115 +12,113 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo"> 
-                Luca <strong>Gaegauf</strong>
-            </div>
-            <nav>
-                <a href="../index.html" class="header-button">Home</a>
-                <a href="../research.html" class="header-button">Research</a>
-                <a href="../teaching.html" class="header-button">Teaching</a>
-            </nav>
-        </header>
+    <header>
+        <div class="logo"> 
+            Luca <strong>Gaegauf</strong>
+        </div>
+        <nav>
+            <a href="../index.html" class="header-button">Home</a>
+            <a href="../research.html" class="header-button">Research</a>
+            <a href="../teaching.html" class="header-button">Teaching</a>
+        </nav>
+    </header>
 
-        <main>
-            <section class="blog-section">
-                <!-- Blog Post Card -->
-                <div class="research-item blog-post">
-                    <div class="research-details">
-                        <h1>Using Product Images to Infer "Perfect Pairings"</h1>
-                        <h2 style="margin-top: -30px;">A Short Overview</h2>
-                        <!-- <p class="post-meta">Published on October 10, 2024</p>
-                        <p><strong>TL;DR:</strong> TODO</p>
-                        <hr style="color: #bebebe; margin-bottom: 20px;"> -->
-                        <p style="font-size: 0.8rem"><em>Please note that this paper is still a work in progress and more research is needed to fully develop and evaluate this approach.</em></p>
+    <main>
+        <section class="blog-section">
+            <!-- Blog Post Card -->
+            <div class="blog-post">
+                <div class="research-details">
+                    <h1>Using Product Images to Infer "Perfect Pairings"</h1>
+                    <h2 style="margin-top: -30px;">A Short Overview</h2>
+                    <!-- <p class="post-meta">Published on October 10, 2024</p>
+                    <p><strong>TL;DR:</strong> TODO</p>
+                    <hr style="color: #bebebe; margin-bottom: 20px;"> -->
+                    <p style="font-size: 0.8rem"><em>Please note that this paper is still a work in progress and more research is needed to fully develop and evaluate this approach.</em></p>
 
-                        <p>Product recommendations are a cornerstone of e-commerce, driving both sales and customer satisfaction. But as product catalogs expand and customer preferences evolve, many traditional recommendation methods fall short. That's where our new model comes in. This method leverages the power of images, using unsupervised learning to create cross-category recommendations that can keep up with fast-moving industries like fashion and home décor.</p>
-                        
-                        <h3>The Challenge with Current Recommender Systems</h3>
-                        
-                        <p>Many current recommendation systems rely heavily on historical customer data. Popular methods depend on large datasets to make accurate recommendations, but they face a major hurdle: the cold-start problem. New products or users, with little data, are hard to recommend to.</p>
-                        
-                        <p>Another issue arises from the speed at which product assortments change, especially in industries like fashion. Content-based and preference-based systems also need detailed, structured information about products, such as characteristics or customer interactions, to function well. But that information isn't always available. These limitations create gaps in the recommendation process that need to be addressed.</p>
-                        
-                        <h3>A New Method for Cross-Category Recommendations</h3>
-                        
-                        <p>Our approach addresses these limitations by using deep learning's ability to extract features from product images. Instead of relying on customer purchase histories or detailed metadata, we use images to infer relationships between different products. This is made possible through advanced machine learning techniques like convolutional neural networks (CNNs) and generative adversarial networks (GANs).</p>
-                        
-                        <p>Unlike traditional methods, our model can recommend items across product categories without any prior data on customer behavior. For example, it can suggest the perfect pair of shoes to match a dress, or a lamp that complements a sofa&mdash;all based solely on images. This innovative use of visual data helps bypass the cold-start problem and opens up new possibilities for cross-category recommendations.</p>
-                        
-                        <h3>Breaking New Ground with Unsupervised Learning</h3>
-                        
-                        <p>At the heart of our model is unsupervised learning. Unlike supervised learning methods that require labeled data, unsupervised learning allows us to extract patterns from images without needing manual input. This means we don't need predefined categories or pairs to learn how to make recommendations across domains.</p>
-                        
-                        <p>Our model focuses on capturing visual similarities between products from different categories. Using GANs, we perform style transfer to understand how certain design elements (like color, shape, or pattern) translate across domains. This allows the system to suggest shoes based on the style of a dress, or vice versa, creating natural pairings between items that weren't explicitly linked before.</p>                        
+                    <p>Product recommendations are a cornerstone of e-commerce, driving both sales and customer satisfaction. But as product catalogs expand and customer preferences evolve, many traditional recommendation methods fall short. That's where our new model comes in. This method leverages the power of images, using unsupervised learning to create cross-category recommendations that can keep up with fast-moving industries like fashion and home décor.</p>
+                    
+                    <h3>The Challenge with Current Recommender Systems</h3>
+                    
+                    <p>Many current recommendation systems rely heavily on historical customer data. Popular methods depend on large datasets to make accurate recommendations, but they face a major hurdle: the cold-start problem. New products or users, with little data, are hard to recommend to.</p>
+                    
+                    <p>Another issue arises from the speed at which product assortments change, especially in industries like fashion. Content-based and preference-based systems also need detailed, structured information about products, such as characteristics or customer interactions, to function well. But that information isn't always available. These limitations create gaps in the recommendation process that need to be addressed.</p>
+                    
+                    <h3>A New Method for Cross-Category Recommendations</h3>
+                    
+                    <p>Our approach addresses these limitations by using deep learning's ability to extract features from product images. Instead of relying on customer purchase histories or detailed metadata, we use images to infer relationships between different products. This is made possible through advanced machine learning techniques like convolutional neural networks (CNNs) and generative adversarial networks (GANs).</p>
+                    
+                    <p>Unlike traditional methods, our model can recommend items across product categories without any prior data on customer behavior. For example, it can suggest the perfect pair of shoes to match a dress, or a lamp that complements a sofa&mdash;all based solely on images. This innovative use of visual data helps bypass the cold-start problem and opens up new possibilities for cross-category recommendations.</p>
+                    
+                    <h3>Breaking New Ground with Unsupervised Learning</h3>
+                    
+                    <p>At the heart of our model is unsupervised learning. Unlike supervised learning methods that require labeled data, unsupervised learning allows us to extract patterns from images without needing manual input. This means we don't need predefined categories or pairs to learn how to make recommendations across domains.</p>
+                    
+                    <p>Our model focuses on capturing visual similarities between products from different categories. Using GANs, we perform style transfer to understand how certain design elements (like color, shape, or pattern) translate across domains. This allows the system to suggest shoes based on the style of a dress, or vice versa, creating natural pairings between items that weren't explicitly linked before.</p>                        
 
-                        <h3>How It Works: Image-Driven Recommendations</h3>
+                    <h3>How It Works: Image-Driven Recommendations</h3>
 
-                        <p>The core technology behind our model consists of CNNs and GANs. First, CNNs analyze product images to extract key visual features, such as texture, color, and shape. These features provide a high-level abstraction of the product's visual identity, which is then used to compare items across categories.</p>
-                        
-                        <p>GANs help with style transfer, allowing the model to map visual features from one product category to another. By doing so, we can make accurate recommendations between items that may not seem related at first glance.</p>
-                        
-                        <h3>Testing the System: What We Discovered</h3>
-                        
-                        <p>To evaluate the performance of our model, we tested it on two datasets: women's apparel and home furniture. These categories were chosen for their distinct visual characteristics, making it an ideal test for cross-domain recommendations. We benchmarked our approach against traditional recommendation models to see how it measured up.</p>
-                        
-                        <p>In addition to quantitative assessments, we conducted a consumer survey to gauge the perceived quality of the recommendations. The results were promising. Not only did our model outperform traditional methods in cross-category matching, but users also found the recommendations to be highly relevant and visually appealing.</p>
+                    <p>The core technology behind our model consists of CNNs and GANs. First, CNNs analyze product images to extract key visual features, such as texture, color, and shape. These features provide a high-level abstraction of the product's visual identity, which is then used to compare items across categories.</p>
+                    
+                    <p>GANs help with style transfer, allowing the model to map visual features from one product category to another. By doing so, we can make accurate recommendations between items that may not seem related at first glance.</p>
+                    
+                    <h3>Testing the System: What We Discovered</h3>
+                    
+                    <p>To evaluate the performance of our model, we tested it on two datasets: women's apparel and home furniture. These categories were chosen for their distinct visual characteristics, making it an ideal test for cross-domain recommendations. We benchmarked our approach against traditional recommendation models to see how it measured up.</p>
+                    
+                    <p>In addition to quantitative assessments, we conducted a consumer survey to gauge the perceived quality of the recommendations. The results were promising. Not only did our model outperform traditional methods in cross-category matching, but users also found the recommendations to be highly relevant and visually appealing.</p>
 
-                        <h3>Expanding the Model: New Frontiers in Product Recommendations</h3>
+                    <h3>Expanding the Model: New Frontiers in Product Recommendations</h3>
 
-                        <p>One of the most exciting aspects of our approach is its flexibility. Beyond single product recommendations, we've expanded the model to handle multiple categories and inputs. This means that from just one product image, the model can recommend items from several different categories. For example, starting with a dress, the system could suggest shoes, bags, and accessories that all complement each other seamlessly.</p>
-                        
-                        <p>Additionally, by using multiple product images as inputs, our model can recommend a holistic style or outfit. For instance, if a customer is looking at both a pair of shoes and a handbag, the model can suggest a dress that ties the look together. This multi-input capability enhances the overall shopping experience, providing recommendations that feel tailored and cohesive.</p>
-                        
-                        <h3>Why Our Model Matters</h3>
-                        
-                        <p>Our model represents a significant step forward for both theoretical and practical applications in recommendation systems. Theoretically, it demonstrates the potential of unsupervised learning for cross-category recommendations, filling a gap that existing methods have struggled with. Practically, it opens new doors for e-commerce businesses, enabling them to make accurate, visually driven recommendations without relying on extensive customer data or product metadata.</p>
-                        
-                        <p>In today's market, where data privacy regulations are becoming stricter and product assortments are changing faster than ever, this model is particularly valuable. By using images, which are readily available for most products, we can provide meaningful recommendations even in scenarios where data is sparse or restricted.</p>
-                        
-                        <h3>Managerial Insights and Business Applications</h3>
-                        
-                        <p>From a business perspective, our model offers multiple benefits. For retailers with fast-moving inventory, such as fashion or home décor stores, the model can generate accurate recommendations as soon as new products are added to the catalog. This is especially useful for businesses that frequently introduce new products, where traditional recommendation systems would struggle due to the lack of historical data.</p>
-                        
-                        <p>Additionally, the model can support customer service agents in creating complete looks or bundles for customers. Instead of manually selecting items from thousands of products, agents can use the model to quickly generate style recommendations that align with customer preferences, improving efficiency and the overall shopping experience.</p>
-                        
-                        <h3>Limitations and Future Directions</h3>
-                        
-                        <p>While our model shows great promise, there are some limitations to consider. One challenge is that the current approach requires separate models for each product category combination. While this is manageable for a few categories, scaling to hundreds of combinations could become resource-intensive. Future research could explore ways to unify these models into a single, more efficient system.</p>
-                        
-                        <p>Another area for improvement is the domain transfer process. Although our model performs well, occasional "incorrect" mappings between products still occur. Refining the style transfer mechanism will be an important focus for future development. Additionally, incorporating other types of data&mdash;such as real-world product images or audio&mdash;could further enhance the model's accuracy and versatility.</p>
-                        
-                        <h3>Conclusion: A New Era of Cross-Category Recommendations</h3>
+                    <p>One of the most exciting aspects of our approach is its flexibility. Beyond single product recommendations, we've expanded the model to handle multiple categories and inputs. This means that from just one product image, the model can recommend items from several different categories. For example, starting with a dress, the system could suggest shoes, bags, and accessories that all complement each other seamlessly.</p>
+                    
+                    <p>Additionally, by using multiple product images as inputs, our model can recommend a holistic style or outfit. For instance, if a customer is looking at both a pair of shoes and a handbag, the model can suggest a dress that ties the look together. This multi-input capability enhances the overall shopping experience, providing recommendations that feel tailored and cohesive.</p>
+                    
+                    <h3>Why Our Model Matters</h3>
+                    
+                    <p>Our model represents a significant step forward for both theoretical and practical applications in recommendation systems. Theoretically, it demonstrates the potential of unsupervised learning for cross-category recommendations, filling a gap that existing methods have struggled with. Practically, it opens new doors for e-commerce businesses, enabling them to make accurate, visually driven recommendations without relying on extensive customer data or product metadata.</p>
+                    
+                    <p>In today's market, where data privacy regulations are becoming stricter and product assortments are changing faster than ever, this model is particularly valuable. By using images, which are readily available for most products, we can provide meaningful recommendations even in scenarios where data is sparse or restricted.</p>
+                    
+                    <h3>Managerial Insights and Business Applications</h3>
+                    
+                    <p>From a business perspective, our model offers multiple benefits. For retailers with fast-moving inventory, such as fashion or home décor stores, the model can generate accurate recommendations as soon as new products are added to the catalog. This is especially useful for businesses that frequently introduce new products, where traditional recommendation systems would struggle due to the lack of historical data.</p>
+                    
+                    <p>Additionally, the model can support customer service agents in creating complete looks or bundles for customers. Instead of manually selecting items from thousands of products, agents can use the model to quickly generate style recommendations that align with customer preferences, improving efficiency and the overall shopping experience.</p>
+                    
+                    <h3>Limitations and Future Directions</h3>
+                    
+                    <p>While our model shows great promise, there are some limitations to consider. One challenge is that the current approach requires separate models for each product category combination. While this is manageable for a few categories, scaling to hundreds of combinations could become resource-intensive. Future research could explore ways to unify these models into a single, more efficient system.</p>
+                    
+                    <p>Another area for improvement is the domain transfer process. Although our model performs well, occasional "incorrect" mappings between products still occur. Refining the style transfer mechanism will be an important focus for future development. Additionally, incorporating other types of data&mdash;such as real-world product images or audio&mdash;could further enhance the model's accuracy and versatility.</p>
+                    
+                    <h3>Conclusion: A New Era of Cross-Category Recommendations</h3>
 
-                        <p>Our model offers a novel solution to the challenges faced by modern recommendation systems. By focusing on unsupervised learning and leveraging image data, we've developed a method that can make accurate, cross-category product recommendations without relying on customer data or detailed product attributes.</p>
+                    <p>Our model offers a novel solution to the challenges faced by modern recommendation systems. By focusing on unsupervised learning and leveraging image data, we've developed a method that can make accurate, cross-category product recommendations without relying on customer data or detailed product attributes.</p>
 
-                        <p>This approach is not only effective but scalable, making it ideal for businesses with rapidly changing inventories or those concerned about data privacy. We believe this model lays a strong foundation for more research on using unsupervised deep learning algorithms to circumvent data limitations in recommendation systems.</p>
+                    <p>This approach is not only effective but scalable, making it ideal for businesses with rapidly changing inventories or those concerned about data privacy. We believe this model lays a strong foundation for more research on using unsupervised deep learning algorithms to circumvent data limitations in recommendation systems.</p>
 
-                        <h3>How To Start Using The Model</h3>
-                        <p>Unfortunately, as this paper is currently unpublished, the code has not been made available.
-                        Furthermore, the only public version of this research is the <a href="assets/papers/perfect_pairings_workshop.pdf" target="_blank">workshop slides</a>.</p>
+                    <h3>How To Start Using The Model</h3>
+                    <p>Unfortunately, as this paper is currently unpublished, the code has not been made available.
+                    Furthermore, the only public version of this research is the <a href="assets/papers/perfect_pairings_workshop.pdf" target="_blank">workshop slides</a>.</p>
 
-                    </div>
                 </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="social-icons">
-                <a class="icon-tooltip">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="tooltip">Zug, Switzerland</div>
-                </a>
-                <a href="https://linkedin.com/in/lgaegauf"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/lpupp"><i class="fab fa-github"></i></a>
-                <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3545351"><i class="fas fa-book"></i></a>
-                <a href="mailto:luca.gaegauf@unige.ch"><i class="far fa-envelope"></i></a>
             </div>
-            <p class="footer-text">Handcrafted by me and ChatGPT</p>
-            <p class="footer-made-with">Made with ❤️</p>
-        </footer>
-    </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a class="icon-tooltip">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="tooltip">Zug, Switzerland</div>
+            </a>
+            <a href="https://linkedin.com/in/lgaegauf"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/lpupp"><i class="fab fa-github"></i></a>
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3545351"><i class="fas fa-book"></i></a>
+            <a href="mailto:luca.gaegauf@unige.ch"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="footer-text">Handcrafted by me and ChatGPT</p>
+        <p class="footer-made-with">Made with ❤️</p>
+    </footer>
 </body>
 </html>

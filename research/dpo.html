@@ -12,99 +12,97 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo"> 
-                Luca <strong>Gaegauf</strong>
-            </div>
-            <nav>
-                <a href="../index.html" class="header-button">Home</a>
-                <a href="../research.html" class="header-button">Research</a>
-                <a href="../teaching.html" class="header-button">Teaching</a>
-            </nav>
-        </header>
+    <header>
+        <div class="logo"> 
+            Luca <strong>Gaegauf</strong>
+        </div>
+        <nav>
+            <a href="../index.html" class="header-button">Home</a>
+            <a href="../research.html" class="header-button">Research</a>
+            <a href="../teaching.html" class="header-button">Teaching</a>
+        </nav>
+    </header>
 
-        <main>
-            <section class="blog-section">
-                <!-- Blog Post Card -->
-                <div class="research-item blog-post">
-                    <div class="research-details">
-                        <h1>Dynamic Portfolio Choice With Transaction Costs</h1>
-                        <h2 style="margin-top: -30px;">A Short Overview</h2>
-                        <p style="font-size: 0.8rem"><em>Please note that this paper is still a work in progress and more research is needed to fully understand the implications of proportional transaction costs.</em></p>
+    <main>
+        <section class="blog-section">
+            <!-- Blog Post Card -->
+            <div class="blog-post">
+                <div class="research-details">
+                    <h1>Dynamic Portfolio Choice With Transaction Costs</h1>
+                    <h2 style="margin-top: -30px;">A Short Overview</h2>
+                    <p style="font-size: 0.8rem"><em>Please note that this paper is still a work in progress and more research is needed to fully understand the implications of proportional transaction costs.</em></p>
 
-                        <!-- <p class="post-meta">Published on October 10, 2024</p>
-                        <p><strong>TL;DR:</strong> TODO</p>
-                        <hr style="color: #bebebe; margin-bottom: 20px;"> -->
-                        <p>In the world of finance, managing a dynamic investment portfolio is an ever-evolving challenge. Investors continuously face the dilemma of adjusting their portfolios to maximize returns while balancing risks. One of the key factors influencing these decisions is the presence of transaction costs, which can significantly affect an investor's portfolio rebalancing strategy. While transaction costs are unavoidable in most financial markets, traditional models for portfolio optimization often simplify or ignore their effects, especially when dealing with large portfolios involving multiple risky assets. In response to this gap, we developed a comprehensive machine learning framework that addresses the complexities of portfolio choice, incorporating the effects of transaction costs in a realistic, computationally efficient manner.</p>
-                        <p>This framework leverages cutting-edge machine learning techniques such as Gaussian process regression (GPR) to approximate value and policy functions dynamically. By focusing on characterizing the so-called "no-trade region" (NTR), we provide an innovative solution to the portfolio choice problem with transaction costs, enabling the consideration of more assets than was previously feasible. Our method is designed to be both scalable and adaptable to different market conditions, offering practical benefits for investors and financial institutions.</p>
+                    <!-- <p class="post-meta">Published on October 10, 2024</p>
+                    <p><strong>TL;DR:</strong> TODO</p>
+                    <hr style="color: #bebebe; margin-bottom: 20px;"> -->
+                    <p>In the world of finance, managing a dynamic investment portfolio is an ever-evolving challenge. Investors continuously face the dilemma of adjusting their portfolios to maximize returns while balancing risks. One of the key factors influencing these decisions is the presence of transaction costs, which can significantly affect an investor's portfolio rebalancing strategy. While transaction costs are unavoidable in most financial markets, traditional models for portfolio optimization often simplify or ignore their effects, especially when dealing with large portfolios involving multiple risky assets. In response to this gap, we developed a comprehensive machine learning framework that addresses the complexities of portfolio choice, incorporating the effects of transaction costs in a realistic, computationally efficient manner.</p>
+                    <p>This framework leverages cutting-edge machine learning techniques such as Gaussian process regression (GPR) to approximate value and policy functions dynamically. By focusing on characterizing the so-called "no-trade region" (NTR), we provide an innovative solution to the portfolio choice problem with transaction costs, enabling the consideration of more assets than was previously feasible. Our method is designed to be both scalable and adaptable to different market conditions, offering practical benefits for investors and financial institutions.</p>
+                    
+                    <h3>Understanding the Dynamic Portfolio Choice Problem</h3>
+                    <p>Portfolio optimization is the process of allocating an investor's wealth across different assets to maximize returns while minimizing risk. Traditionally, this problem is solved under idealized assumptions, such as frictionless markets where assets can be bought and sold without any transaction costs. However, in reality, every transaction incurs costs, which can eat into the returns and influence the investor's decisions. Transaction costs can come in many forms, such as brokerage fees, taxes, and bid-ask spreads, all of which must be accounted for in a realistic portfolio optimization model.</p>
+                    <p>One of the major challenges in dynamic portfolio choice is understanding when it is optimal to rebalance a portfolio, given the costs associated with transactions. Investors need to decide not only what assets to hold but also when it is worth buying or selling them. This creates a NTR, where the cost of making a transaction outweighs the benefits of rebalancing. The shape and size of this NTR depend on factors like the number of assets, the correlation between them, and market conditions. Despite advances in portfolio optimization models, most existing methods have been limited to a small number of assets or overly simplified assumptions. Our framework addresses these limitations by introducing machine learning techniques that allow for a more accurate and scalable approach.</p>
+                    
+                    <h3>A New Approach: Machine Learning in Dynamic Portfolio Optimization</h3>
+                    <p>Machine learning has become a powerful tool for solving complex problems in finance, and we apply it to the dynamic portfolio choice problem with transaction costs. The high-dimensional nature of portfolio optimization, especially with many assets, presents a significant challenge that traditional computational methods struggle to solve efficiently. Our framework employs GPR to address these challenges.</p>
+                    <p>GPR allows us to approximate the value and policy functions that dictate an investor's decisions over time. By focusing on areas where the value of rebalancing is unclear (like around the boundaries of the NTR), GPR helps to avoid wasting computational resources on regions where the solution is already well understood. Meanwhile, our data sampling procedure adjusts the sample points used in the optimization process, ensuring that the model focuses on the most important areas. This combination provides a more efficient and scalable way to solve dynamic portfolio optimization problems than traditional grid-based methods.</p>
+                    
+                    <h3>The Dynamic programming Framework We Use</h3>
+                    <p>Dynamic programming (DP) is a cornerstone of optimization in portfolio choice. It breaks down complex, multi-period problems into smaller, manageable stages. In our model, DP is essential for addressing the sequential decision-making process investors face: how to allocate wealth across different assets, given future uncertainties and transaction costs. However, traditional DP approaches are limited by the "curse of dimensionality," which makes them computationally expensive and inefficient when handling large portfolios.</p>
+                    <p>We enhance the DP framework by integrating GPR, which helps approximate the value function over time. Instead of relying on grids that grow exponentially with the number of assets, our GPR-based approach focuses computational resources where they are most needed, allowing us to handle more assets efficiently. A critical component of our DP method is how we handle the NTR, the space where it is not optimal to trade due to transaction costs. Our approach offers a novel way to estimate the NTR in each period, reducing unnecessary calculations and improving the scalability of the model.</p>
+                    
+                    <h3>The NTR</h3>
+                    <p>In our framework, we introduce a novel way to approximate the NTR using GPR. By focusing computational efforts on the boundaries of this region, where the decision to trade or not is most uncertain, we can accurately estimate the NTR's shape and size without the need for computationally expensive grid-based methods. This makes it possible to handle more assets and complex market conditions.</p>
+                    
+                    <h3>Overcoming Dimensionality</h3>
+
+                    <h3>Key Contributions and Insights from Our Research</h3>
+                    <ul>
+                        <li><strong>Efficient Scaling with More Assets:</strong> Our framework scales to portfolios with more risky assets by focusing on key areas, like the NTR, providing practical insights for real-world scenarios and helping mitigate illiquidity through diversification.</li>
                         
-                        <h3>Understanding the Dynamic Portfolio Choice Problem</h3>
-                        <p>Portfolio optimization is the process of allocating an investor's wealth across different assets to maximize returns while minimizing risk. Traditionally, this problem is solved under idealized assumptions, such as frictionless markets where assets can be bought and sold without any transaction costs. However, in reality, every transaction incurs costs, which can eat into the returns and influence the investor's decisions. Transaction costs can come in many forms, such as brokerage fees, taxes, and bid-ask spreads, all of which must be accounted for in a realistic portfolio optimization model.</p>
-                        <p>One of the major challenges in dynamic portfolio choice is understanding when it is optimal to rebalance a portfolio, given the costs associated with transactions. Investors need to decide not only what assets to hold but also when it is worth buying or selling them. This creates a NTR, where the cost of making a transaction outweighs the benefits of rebalancing. The shape and size of this NTR depend on factors like the number of assets, the correlation between them, and market conditions. Despite advances in portfolio optimization models, most existing methods have been limited to a small number of assets or overly simplified assumptions. Our framework addresses these limitations by introducing machine learning techniques that allow for a more accurate and scalable approach.</p>
+                        <li><strong>Reducing Computational Overhead:</strong> By using a novel data sampling procedure and GPR, our method reduces the need for dense grids, allowing for faster and more accurate computations with fewer resources, making it scalable for larger portfolios.</li>
                         
-                        <h3>A New Approach: Machine Learning in Dynamic Portfolio Optimization</h3>
-                        <p>Machine learning has become a powerful tool for solving complex problems in finance, and we apply it to the dynamic portfolio choice problem with transaction costs. The high-dimensional nature of portfolio optimization, especially with many assets, presents a significant challenge that traditional computational methods struggle to solve efficiently. Our framework employs GPR to address these challenges.</p>
-                        <p>GPR allows us to approximate the value and policy functions that dictate an investor's decisions over time. By focusing on areas where the value of rebalancing is unclear (like around the boundaries of the NTR), GPR helps to avoid wasting computational resources on regions where the solution is already well understood. Meanwhile, our data sampling procedure adjusts the sample points used in the optimization process, ensuring that the model focuses on the most important areas. This combination provides a more efficient and scalable way to solve dynamic portfolio optimization problems than traditional grid-based methods.</p>
+                        <li><strong>Addressing Liquidity Issues:</strong> Our framework helps investors manage liquidity problems by optimizing portfolio diversity, improving decision-making around when to trade, and minimizing the impact of transaction costs in illiquid markets.</li>
+                        </ul>
                         
-                        <h3>The Dynamic programming Framework We Use</h3>
-                        <p>Dynamic programming (DP) is a cornerstone of optimization in portfolio choice. It breaks down complex, multi-period problems into smaller, manageable stages. In our model, DP is essential for addressing the sequential decision-making process investors face: how to allocate wealth across different assets, given future uncertainties and transaction costs. However, traditional DP approaches are limited by the "curse of dimensionality," which makes them computationally expensive and inefficient when handling large portfolios.</p>
-                        <p>We enhance the DP framework by integrating GPR, which helps approximate the value function over time. Instead of relying on grids that grow exponentially with the number of assets, our GPR-based approach focuses computational resources where they are most needed, allowing us to handle more assets efficiently. A critical component of our DP method is how we handle the NTR, the space where it is not optimal to trade due to transaction costs. Our approach offers a novel way to estimate the NTR in each period, reducing unnecessary calculations and improving the scalability of the model.</p>
-                        
-                        <h3>The NTR</h3>
-                        <p>In our framework, we introduce a novel way to approximate the NTR using GPR. By focusing computational efforts on the boundaries of this region, where the decision to trade or not is most uncertain, we can accurately estimate the NTR's shape and size without the need for computationally expensive grid-based methods. This makes it possible to handle more assets and complex market conditions.</p>
-                        
-                        <h3>Overcoming Dimensionality</h3>
+                    <h3>Results of Our Dynamic Portfolio Choice Model</h3>
+                    <p>To evaluate the effectiveness of our machine learning framework, we conducted a series of numerical experiments on a portfolio choice model involving multiple risky assets and a risk-free bond. Our findings provide both technical and economic insights into the dynamics of portfolio choice with transaction costs.</p>
+                    <p>One of the key insights from our model is the role that transaction costs play in shaping the NTR. As transaction costs increase, the size of the NTR grows, meaning that investors are less likely to trade unless the expected benefits outweigh the costs. However, our results also show that by giving investors access to more assets, the negative effects of high transaction costs can be partially mitigated. Diversification across a broader range of assets helps reduce the illiquidity premium and allows investors to make more informed trading decisions.</p>
+                    <p>Our framework also outperforms existing methods in terms of computational efficiency as we were able to approximate the value and policy functions more accurately while using fewer computation points. This not only speeds up the optimization process but also allows us to solve larger, more realistic portfolio optimization problems than traditional methods.</p>
 
-                        <h3>Key Contributions and Insights from Our Research</h3>
-                        <ul>
-                            <li><strong>Efficient Scaling with More Assets:</strong> Our framework scales to portfolios with more risky assets by focusing on key areas, like the NTR, providing practical insights for real-world scenarios and helping mitigate illiquidity through diversification.</li>
-                            
-                            <li><strong>Reducing Computational Overhead:</strong> By using a novel data sampling procedure and GPR, our method reduces the need for dense grids, allowing for faster and more accurate computations with fewer resources, making it scalable for larger portfolios.</li>
-                            
-                            <li><strong>Addressing Liquidity Issues:</strong> Our framework helps investors manage liquidity problems by optimizing portfolio diversity, improving decision-making around when to trade, and minimizing the impact of transaction costs in illiquid markets.</li>
-                          </ul>
-                          
-                        <h3>Results of Our Dynamic Portfolio Choice Model</h3>
-                        <p>To evaluate the effectiveness of our machine learning framework, we conducted a series of numerical experiments on a portfolio choice model involving multiple risky assets and a risk-free bond. Our findings provide both technical and economic insights into the dynamics of portfolio choice with transaction costs.</p>
-                        <p>One of the key insights from our model is the role that transaction costs play in shaping the NTR. As transaction costs increase, the size of the NTR grows, meaning that investors are less likely to trade unless the expected benefits outweigh the costs. However, our results also show that by giving investors access to more assets, the negative effects of high transaction costs can be partially mitigated. Diversification across a broader range of assets helps reduce the illiquidity premium and allows investors to make more informed trading decisions.</p>
-                        <p>Our framework also outperforms existing methods in terms of computational efficiency as we were able to approximate the value and policy functions more accurately while using fewer computation points. This not only speeds up the optimization process but also allows us to solve larger, more realistic portfolio optimization problems than traditional methods.</p>
+                    <h3>Challenges and Limitations</h3>
+                    <p>While our machine learning framework offers significant improvements over traditional methods, there are still challenges and limitations to consider. One of the primary challenges is handling highly non-linear relationships between assets, especially when dealing with larger portfolios. Although GPR is effective at approximating these relationships, it still requires careful calibration and may struggle with extremely complex market dynamics.</p>
+                    <p>Another limitation is the computational demand required for very large portfolios. While our method is more efficient than grid-based approaches, it still requires significant computational resources for high-dimensional problems. Future research may explore ways to further optimize this process or introduce more sophisticated machine learning techniques to reduce these costs.</p>
 
-                        <h3>Challenges and Limitations</h3>
-                        <p>While our machine learning framework offers significant improvements over traditional methods, there are still challenges and limitations to consider. One of the primary challenges is handling highly non-linear relationships between assets, especially when dealing with larger portfolios. Although GPR is effective at approximating these relationships, it still requires careful calibration and may struggle with extremely complex market dynamics.</p>
-                        <p>Another limitation is the computational demand required for very large portfolios. While our method is more efficient than grid-based approaches, it still requires significant computational resources for high-dimensional problems. Future research may explore ways to further optimize this process or introduce more sophisticated machine learning techniques to reduce these costs.</p>
+                    <h3>Practical Implications for Investors</h3>
+                    <p>The insights from our research have important practical implications for both institutional and individual investors. By incorporating transaction costs into the dynamic portfolio optimization process, our machine learning framework offers a more realistic approach to managing investment portfolios. Investors can use this framework to make more informed decisions about when and how to rebalance their portfolios, taking into account the impact of transaction costs on their overall returns.</p>
+                    <p>For institutional investors managing large portfolios, our framework provides a scalable solution to handle multiple risky assets while minimizing computational overhead. The ability to efficiently model the NTR means that portfolio managers can focus on the critical moments when rebalancing is most beneficial, thereby reducing unnecessary trading and minimizing costs.</p>
 
-                        <h3>Practical Implications for Investors</h3>
-                        <p>The insights from our research have important practical implications for both institutional and individual investors. By incorporating transaction costs into the dynamic portfolio optimization process, our machine learning framework offers a more realistic approach to managing investment portfolios. Investors can use this framework to make more informed decisions about when and how to rebalance their portfolios, taking into account the impact of transaction costs on their overall returns.</p>
-                        <p>For institutional investors managing large portfolios, our framework provides a scalable solution to handle multiple risky assets while minimizing computational overhead. The ability to efficiently model the NTR means that portfolio managers can focus on the critical moments when rebalancing is most beneficial, thereby reducing unnecessary trading and minimizing costs.</p>
+                    <h3>Conclusion</h3>
+                    <p>Our research introduces a comprehensive machine learning framework for dynamic portfolio choice with transaction costs, addressing many of the limitations present in traditional models. By integrating GPR and a unique data sampling method into a DP framework, we offer an efficient and scalable solution for handling portfolios with multiple risky assets. Our framework provides both practical and theoretical insights into how transaction costs influence portfolio decisions and offers new ways to mitigate the effects of illiquidity in financial markets.</p>
+                    <p>The key contributions of our work include the ability to scale dynamic portfolio optimization models to handle more assets, reducing computational overhead, and offering a novel way to approximate the NTR. These innovations provide real-world benefits for both institutional and individual investors, helping them manage transaction costs more effectively.</p>
 
-                        <h3>Conclusion</h3>
-                        <p>Our research introduces a comprehensive machine learning framework for dynamic portfolio choice with transaction costs, addressing many of the limitations present in traditional models. By integrating GPR and a unique data sampling method into a DP framework, we offer an efficient and scalable solution for handling portfolios with multiple risky assets. Our framework provides both practical and theoretical insights into how transaction costs influence portfolio decisions and offers new ways to mitigate the effects of illiquidity in financial markets.</p>
-                        <p>The key contributions of our work include the ability to scale dynamic portfolio optimization models to handle more assets, reducing computational overhead, and offering a novel way to approximate the NTR. These innovations provide real-world benefits for both institutional and individual investors, helping them manage transaction costs more effectively.</p>
-
-                        <h3>How To Start Using The Framework</h3>
-                        <p>Unfortunately, as this paper is currently unpublished, the code has not been made available. The reader is kindly referred to the
-                            <a href="https://github.com/lpupp/deep-portfolio-choice" target="_blank">working paper </a> for more information on the method, or is asked to get in touch for specific questions.
-                        </p>
-                    </div>
+                    <h3>How To Start Using The Framework</h3>
+                    <p>Unfortunately, as this paper is currently unpublished, the code has not been made available. The reader is kindly referred to the
+                        <a href="https://github.com/lpupp/deep-portfolio-choice" target="_blank">working paper </a> for more information on the method, or is asked to get in touch for specific questions.
+                    </p>
                 </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="social-icons">
-                <a class="icon-tooltip">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="tooltip">Zug, Switzerland</div>
-                </a>
-                <a href="https://linkedin.com/in/lgaegauf"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/lpupp"><i class="fab fa-github"></i></a>
-                <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3545351"><i class="fas fa-book"></i></a>
-                <a href="mailto:luca.gaegauf@unige.ch"><i class="far fa-envelope"></i></a>
             </div>
-            <p class="footer-text">Handcrafted by me and ChatGPT</p>
-            <p class="footer-made-with">Made with ❤️</p>
-        </footer>
-    </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a class="icon-tooltip">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="tooltip">Zug, Switzerland</div>
+            </a>
+            <a href="https://linkedin.com/in/lgaegauf"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/lpupp"><i class="fab fa-github"></i></a>
+            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3545351"><i class="fas fa-book"></i></a>
+            <a href="mailto:luca.gaegauf@unige.ch"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="footer-text">Handcrafted by me and ChatGPT</p>
+        <p class="footer-made-with">Made with ❤️</p>
+    </footer>
 </body>
 </html>
